@@ -1,0 +1,46 @@
+.Card {
+  background: #121212;
+  height: 232px;
+  width: 159px;
+  margin: 10px;
+}
+.Card img {
+  height: 170px;
+  width: 159px;
+  margin: 0px;
+}
+
+.followersOuter {
+  margin-top: 0px;
+  width: 159px;
+  height: 35px;
+  background-color: #fff;
+  display: inline-flex;
+  padding: 4px 8px;
+  align-items: flex-start;
+  border-radius: 2px;
+}
+.followers {
+  background: #121212;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 71px;
+  height: 23px;
+  display: inline-flex;
+  padding: 4px 8px;
+  align-items: center;
+  gap: 1px;
+  border-radius: 10px;
+}
+.title {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
