@@ -11,7 +11,7 @@ const Navbar = () => {
         placeholder="Search a album of your choice"
       ></input>
       <button className={Styles.button} type="button">
-        <AiOutlineSearch />
+        <AiOutlineSearch size={20} />
       </button>
 
       <div className={Styles.feedbackContainer}>
