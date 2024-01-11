@@ -1,25 +1,32 @@
-import Styles from "../Navbar/Navbar.module.css";
-import QtifyLogo from "./QtifyLogo.svg";
-import { AiOutlineSearch } from "react-icons/ai";
-const Navbar = () => {
-  return (
-    <div className={Styles.container}>
-      <img src={QtifyLogo} alt="qtify" className={Styles.imageLogo}></img>
-      <input
-        className={Styles.input}
-        type="text"
-        placeholder="Search a album of your choice"
-      ></input>
-      <button className={Styles.button} type="button">
-        <AiOutlineSearch size={20} />
-      </button>
+/* eslint-disable react/prop-types */
 
-      <div className={Styles.feedbackContainer}>
-        <button type="button" className={Styles.feedback}>
-          Give Feedback
-        </button>
-      </div>
+import styles from "./NavBar.module.css";
+import LogoImage from "../Logo/Logo";
+import SearchBar from "../SearchBar/SearchBar";
+import FeedBackButton from "../FeedBackButton/FeedBackButton";
+import { useNavigate } from "react-router-dom";
+
+const NavBar = ({ data }) => {
+  const navigate = useNavigate();
+
+  return (
+    <div className={styles.wrapper}>
+      <nav className={styles.navbar}>
+        <div
+          className={styles.logoWrapper}
+          onClick={() => navigate(`/`)}
+          style={{ cursor: "pointer" }}
+        >
+          
+          <LogoImage id={styles.logo} />
+        </div>
+        <div className={styles.searchWrapper}>
+          <SearchBar placeholder="Search an album of your choice" data={data} />
+        </div>
+      </nav>
+      <FeedBackButton />
     </div>
   );
 };
-export default Navbar;
+
+export default NavBar;
